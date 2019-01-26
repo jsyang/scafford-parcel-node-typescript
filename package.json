@@ -1,0 +1,12 @@
+{
+  "name": "node-project",
+  "scripts": {
+    "watch": "parcel watch src/app.ts --target=node --no-hmr --no-source-maps & nodemon ./dist/app.js",
+    "build": "rm -rf .cache ; parcel build src/app.ts --target=node"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "parcel-bundler": "^1.11.0",
+    "typescript": "^3.2.2"
+  }
+}
