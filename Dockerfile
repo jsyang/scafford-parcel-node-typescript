@@ -1,12 +1,10 @@
-FROM node:10
-WORKDIR /usr/dist
+FROM node:lts-alpine
+WORKDIR /usr/app
 
 COPY package.json ./
-RUN yarn i --only-production
+RUN yarn
 
 COPY . .
 
 EXPOSE 3000
-CMD ["node", "app.js"]
-
-
+CMD ["node", "dist/app.js"]

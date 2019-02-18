@@ -2,7 +2,7 @@
   "name": "node-project",
   "scripts": {
     "watch": "parcel watch src/app.ts --target=node --no-hmr --no-source-maps & nodemon ./dist/app.js",
-    "build": "rm -rf .cache ; parcel build src/app.ts --target=node"
+    "build": "rm -rf .cache ; PARCEL_WORKERS=1 parcel build ./src/app.ts --target=node"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",
